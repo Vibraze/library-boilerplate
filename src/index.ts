@@ -11,7 +11,26 @@ export function dateToString(date: Date): string {
     `${date.getFullYear()}-` +
     `${date.getMonth() + 1}`.padStart(2, '0') +
     `-` +
+    `${date.getDate()}`.padStart(2, '0') +
+    ' ' +
+    `${date.getHours()}:` +
+    `${date.getMinutes()}:` +
+    `${date.getSeconds()}`
+  );
+}
+
+export function dateToDateString(date: Date): string {
+  return (
+    `${date.getFullYear()}-` +
+    `${date.getMonth() + 1}`.padStart(2, '0') +
+    `-` +
     `${date.getDate()}`.padStart(2, '0')
+  );
+}
+
+export function dateToTimeString(date: Date): string {
+  return (
+    `${date.getHours()}:` + `${date.getMinutes()}:` + `${date.getSeconds()}`
   );
 }
 
